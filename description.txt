@@ -1,0 +1,5 @@
+En esta actividad tenéis que crear una visualización interactiva en D3.js que permita analizar tendencias presentes en cualquiera de los ámbitos recogidos en epData: población, deuda pública, empleo, crimen, vivienda, pensiones, estimación de voto, accidentes de tráfico, etc…
+
+También podéis escoger cualquier otra fuente de datos local de vuestra ciudad o país.
+
+En la visualización podrán existir una o más gráficas y se incorporarán todos aquellos elementos (leyendas, tooltips, animaciones, escalas de tamaños, colores, gestión de eventos…) que contribuyan a un mejor entendimiento de las variables seleccionadas.
