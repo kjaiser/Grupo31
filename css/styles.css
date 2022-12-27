@@ -1,0 +1,103 @@
+
+.sin_padding{
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+a{
+  text-decoration: none;
+}
+main{
+  margin-left: 2%;
+}
+.titulo1{
+    color: #444;
+}
+
+.menu-lateral{
+  padding-top: 20px;
+  height:100%;
+  border-right: 1px solid #ccc;
+}
+
+.fig {
+    background-color: none;
+  }
+  
+  .texto {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: Impact;
+    fill: #457b9d;
+  }
+  
+  .grupo {
+    fill: #ffffff44;
+    stroke: #00000099;
+  }
+  
+  .ejes {
+    font-size: 16px;
+    font-family: "Fira Code";
+  }
+  
+  .ejes line {
+    stroke-width: 1;
+    stroke: #33333344;
+    stroke-dasharray: 4 2;
+  }
+  
+  .labels {
+    font-size: 20px;
+    font-family: "Fira Code";
+  }
+  
+  .year {
+    font-size: 450px;
+    font-family: "Fira Code";
+    font-weight: bold;
+    fill: #bbb;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+
+.tools{
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.tools li a, li{
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+  text-decoration: none;
+  color: #555;
+}
+.type-graf{
+  width: 110px;
+  text-align: center;
+}
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+#buscador{
+  border-radius: 99px;
+  border: 1px solid #ccc;
+}
+.botones{
+  display: flex;
+  justify-content: space-around;
+}
+.botones a{
+  padding: 0 5px;
+  color: #eee;
+  cursor: pointer;
+}
+.botones a:hover{
+  color: #555;
+}
+.ocultar{
+  display: none;
+}

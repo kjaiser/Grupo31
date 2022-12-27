@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar sin_padding bg-light">
+            <a class="navbar-brand " href="#">
+              <img src="https://static.unir.net/mediateca/Unir_L_verticalnegro.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"
+              style="margin-left: 100%;">
+            </a>
+            <span class="inline-block align-top" style="margin-right: 2%;">Herramientas de Visualizacion</span> 
+        </nav>
+    </header>
+
+    <main>
+      <div class="row w-100">
+        <div class="col-3 text-center"  style="height: auto;">
+            <div class="menu-lateral">
+              <h2 class="fs-6 text-dark">
+                <i class="fa-solid fa-folder-tree"></i>
+                Administrador de Archivos
+              </h2>
+              <div class="container">
+                <h3 class="fs-6 text-dark"><i class="fa-solid fa-database fa-xs p-2"></i>
+                  Bases de Datos</h3>
+              </div>
+            </div>
+        </div>
+        <div class="col-9 justify-content-md-center">
+          <div class="row w-100 my-1 vertical-align">
+            <div class="col-2">
+              <h2 class="fs-6" style="margin-top: auto; margin-bottom: auto">Cambiar grafica</h2>
+            </div>
+            <div class="col-8">
+              <ul class="tools">
+                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-area"></i> histogram</a></li>
+                <li class="type-graf align-middle"><a onclick="mostrar('scatter')" href="#"><i class="fa-solid fa-chart-line"></i></i> scatter</a></li>
+                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-pie"></i> radial</a></li>
+                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-column"></i> bar</a></li>
+                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-gantt"></i> box</a></li>
+              </ul>
+            </div>
+            <div class="col-1 botones">
+              <div>
+
+                <a onclick="toggleAnimacion()" id="btnAnimacion" class="boton">
+                  <i class="fas fa-play"></i>
+                </a>
+                <a onclick="delta(1)" class="boton">
+                  <i class="fa-solid fa-microchip"></i>
+                </a>
+            </div>
+            </div>
+            <div class="col-1">
+              <div class="row">
+                <input type="search" id="buscador" placeholder="Filtrar por...">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row"> 
+            <div class="graf" style="height: 80vh;width: 100%;">
+              <div id="graf" class="scatter" style="position: relative">
+                <div class="p-2 bg-danger text-warning rounded shadow-sm"
+                    id="tooltip"
+                    style="position: absolute; display: none"
+                    onclick="hideTooltip()"
+                  >
+                  <p> Country: <span id="country"><strong>xxxxx</strong></span>
+                    <br />
+                    Population: <span id="population"><strong>xxxxx</strong></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"
+        integrity="sha512-MefNfAGJ/pEy89xLOFs3V6pYPs6AmUhXJrRlydI/9wZuGrqxmrdQ80zKHUcyadAcpH67teDZcBeS6oMJLPtTqw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"
+    ></script>
+    <script src="js/graf.js"></script>
+    <script src="js/servicios/servicio_archivos.js"></script>
+
+</body>
+</html>
