@@ -1,15 +1,13 @@
 $(document).ready(function(){
     console.log("listo");
 
+    var boton = $(".btn");
+    boton.click(function(){
+        boton.removeClass("seleccionado")
+        $(this).addClass("seleccionado");
+        var claseG = "." + $(this).val()
+        $(".grafica").addClass("ocultar")
+        $(claseG).removeClass("ocultar");
+    })
 
 });
-
-const mostrar = (g)=>{
-    g = "."+g
-    if($(g).hasClass("ocultar")){
-        $(g).removeClass("ocultar")
-    }else{
-        $(g).addClass("ocultar")
-    }
-    console.log(g)
-  }

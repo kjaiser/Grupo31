@@ -39,13 +39,72 @@
       <div class="row w-100">
         <div class="col-3 text-center"  style="height: auto;">
             <div class="menu-lateral">
-              <h2 class="fs-6 text-dark">
+              <h2 class="fs-6 text-dark" style="text-align: start;">
                 <i class="fa-solid fa-folder-tree"></i>
                 Administrador de Archivos
               </h2>
+
               <div class="container">
-                <h3 class="fs-6 text-dark"><i class="fa-solid fa-database fa-xs p-2"></i>
-                  Bases de Datos</h3>
+
+                <div class="accordion accordion-flush" id="accordionG">
+                  <div class="accordion-item">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <h3 class="fs-6 text-dark"><i class="fa-solid fa-database fa-xs p-2"></i>
+                          Bases de Datos</h3>
+                      </button>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+
+                        <div class="accordion accordion-flush" id="accordionS">
+                          <div class="accordion-item">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                <h2 class="fs-6 text-dark"><i class="fa-solid fa-database fa-xs p-2"></i>
+                                  DB 1</h2>
+                              </button>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                                    The current link item
+                                  </a>
+                                  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <h3 class="fs-6 text-dark"><i class="fa-solid fa-filter fa-xs p-2"></i>
+                          Filtros de tabla</h3>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <h3 class="fs-6 text-dark"><i class="fa-solid fa-file fa-xs p-2"></i>
+                          Otros Archivos</h3>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
         </div>
@@ -55,13 +114,25 @@
               <h2 class="fs-6" style="margin-top: auto; margin-bottom: auto">Cambiar grafica</h2>
             </div>
             <div class="col-8">
-              <ul class="tools">
-                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-area"></i> histogram</a></li>
-                <li class="type-graf align-middle"><a onclick="mostrar('scatter')" href="#"><i class="fa-solid fa-chart-line"></i></i> scatter</a></li>
-                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-pie"></i> radial</a></li>
-                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-column"></i> bar</a></li>
-                <li class="type-graf align-middle"><a class="opt-g" href="#"><i class="fa-solid fa-chart-gantt"></i> box</a></li>
-              </ul>
+
+              <div class="btn-group btn-group-sm btn-group-justified">
+                <button type="button" class="btn seleccionado" value="scatter">
+                  <i class="fa-solid fa-chart-line"></i> scatter</label>
+                </button>                
+                <button type="button" value="histograma" class="btn">
+                  <i class="fa-solid fa-chart-area"></i> histograma</label>
+                </button>                
+                <button type="button" value=3 class="btn">
+                  <i class="fa-solid fa-chart-pie"></i> radial</label>
+                </button>            
+                <button type="button" value="gBar" class="btn">
+                  <i class="fa-solid fa-chart-column"></i> bar</label>
+                </button>            
+                <button type="button" value="gBox" class="btn">
+                  <i class="fa-solid fa-chart-gantt"></i> box</label>
+                </button>
+              
+              </div>
             </div>
             <div class="col-1 botones">
               <div>
@@ -83,8 +154,16 @@
 
 
           <div class="row"> 
-            <div class="graf" style="height: 80vh;width: 100%;">
-              <div id="graf" class="scatter" style="position: relative">
+            <div class="graf" style="height: 80vh;width: 100%;position: relative">
+              <div id="gBar" class="grafica gBar">
+                
+              </div>
+
+              <div id="histograma" class="grafica histograma ocultar" style="position: absolute">
+                
+              </div>
+
+              <div id="scatter" class="grafica scatter ocultar" style="position: relative">
                 <div class="p-2 bg-danger text-warning rounded shadow-sm"
                     id="tooltip"
                     style="position: absolute; display: none"
@@ -96,6 +175,8 @@
                   </p>
                 </div>
               </div>
+              
+
             </div>
           </div>
         </div>
@@ -114,7 +195,10 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"
     ></script>
-    <script src="js/graf.js"></script>
+    <!-- <script src="js/gScatter.js"></script> -->
+    <script src="js/gBar.js"></script>
+    <script src="js/histograma.js"></script>
+    <script src="js/d3_setting.js"></script>
     <script src="js/servicios/servicio_archivos.js"></script>
 
 </body>

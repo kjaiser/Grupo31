@@ -1,4 +1,4 @@
-const graf = d3.select("#graf")
+const graf = d3.select("#scatter")
 const tooltip = d3.select("#tooltip")
 const country = d3.select("#country")
 const population = d3.select("#population")
