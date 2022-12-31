@@ -1,13 +1,12 @@
-$(document).ready(function(){
+const graficar=()=>{
     console.log("listo");
 
     var boton = $(".btn");
     boton.click(function(){
         boton.removeClass("seleccionado")
         $(this).addClass("seleccionado");
-        var claseG = "." + $(this).val()
-        $(".grafica").addClass("ocultar")
-        $(claseG).removeClass("ocultar");
+        var tipo_graf = $(this).val()
+        render(tipo_graf);        
     })
 
-});
+}

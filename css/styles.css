@@ -53,7 +53,7 @@ main{
   }
   
   .year {
-    font-size: 450px;
+    font-size: 200px;
     font-family: "Fira Code";
     font-weight: bold;
     fill: #bbb;
@@ -104,9 +104,11 @@ main{
 }
 .btn{
   color: #bbb;
+  --bs-btn-border-width: 0px;
 }
 .btn:hover{
-  color:rgb(90, 110, 97)
+  color:rgb(90, 110, 97);
+  background-color: #e6eaec;
 }
 .active{
   border: blue;
@@ -114,4 +116,14 @@ main{
 .seleccionado{
   background-color: #e6eaec;
   color: rgb(90, 110, 97);
+}
+.graficas{
+  height: 70vh;
+  width: 90%;
+}
+.accordion-button:focus{
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+  background-color: white;
 }
