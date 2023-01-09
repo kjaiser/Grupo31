@@ -1,6 +1,6 @@
 
 const rellenarHtml=(data)=>{
-      var campos = Object.keys(data[0]);
+  var campos = Object.keys(data[0]);
   console.log(campos);
 
   campos.forEach(element => {

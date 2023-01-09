@@ -2,7 +2,7 @@
 const render1 = () => {
   
   const newData = d3.filter(data, (d) => d.year == iy);
-  const circle = g.selectAll("circle").data(newData, (d) => d.country);
+  const circle = g.append("g").attr("class","g-circular").selectAll("circle").data(newData, (d) => d.country);
   circle
     .enter()
     .append("circle")
@@ -42,20 +42,24 @@ const render1 = () => {
 const render2 = ()=>{
   const ancho = 2;
   const newData = d3.filter(data, (d) => d.year == iy);
-  const bar = g.selectAll("bar").data(newData).enter();
-    bar.append("rect")
-    .attr("x",0)
-    .attr("transform", function(d, i) {
-      return "translate(" + (i*ancho)+ ", 0)";
-    })
-    .transition()
-    .duration(2000)
-    .attr("width",ancho)
-    .attr("heigth", 0)
 
-    .attr("dy", ".35em")
-    .attr("y", function(d){
-      return alto - y(d.life_exp)+ "px"; })
+  var dominio  = newData.map(d => d.country);
+  const scaleB = d3.scaleBand().domain(dominio).range([0, ancho]).paddingInner(0.2).paddingOuter(0.2);
+  const bar = g.append("g").selectAll("bar").data(newData).enter();
+
+
+  bar.append("rect")
+    .attr("y", 0)
+    .attr("x",(d) => scaleB(d.country))
+    //.attr("transform", function(d, i) {
+    //  return "translate(" + (i*scaleB.bandwidth)+ ", 0)";
+    //})
+    //.transition()
+    //.duration(2000)
+    .attr("width",scaleB.bandwidth)
+    //.attr("heigth", 0)
+
+    //.attr("dy", ".35em")
     .attr("height", function(d){
       return y(d.life_exp) + "px"; })
     .attr("fill", "teal");
@@ -67,8 +71,8 @@ const render2 = ()=>{
     .attr("y", function(d) {
       return d.life_exp;
     })
-    .attr("dx", ".35em")
-    .text(function(d) { return d.life_exp; });
+    .attr("cx", ".35em")
+    .text(function(d) { return scaleB(d.country); });
 
 }
 

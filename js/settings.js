@@ -1,10 +1,10 @@
-const graf = d3.select(".graficas")
+const graf = d3.select("#graf1")
 const tooltip = d3.select("#tooltip")
 const country = d3.select("#country")
 const population = d3.select("#population")
 const btnAnimacion = d3.select("#btnAnimacion")
 
-const margins = { left: 75, top: 40, right: 10, bottom: 50 }
+const margins = { left: 75, top: 40, right: 80, bottom: 50 }
 const anchoTotal = +graf.style("width").slice(0, -2)
 const altoTotal = (anchoTotal * 9) / 16
 const ancho = anchoTotal - margins.left - margins.right
@@ -44,7 +44,7 @@ const x = d3.scaleLog().range([0, ancho])
 const y = d3.scaleLinear().range([alto, 0])
 const A = d3.scaleLinear().range([20, 70600])
 const continente = d3.scaleOrdinal().range(d3.schemeSet2)
-
+    
 const xAxis = d3.axisBottom(x).tickSize(-alto)
 const yAxis = d3.axisLeft(y).tickSize(-ancho)
 
@@ -54,7 +54,8 @@ var intervalo
 var pais
 
 
-const ajuste = (data)=>{  x.domain(d3.extent(data, (d) => d.income))
+const ajuste = (data)=>{  
+  x.domain(d3.extent(data, (d) => d.income))
   y.domain(d3.extent(data, (d) => d.life_exp))
   A.domain(d3.extent(data, (d) => d.population))
   continente.domain(Array.from(new Set(data.map((d) => d.continent))))
@@ -71,13 +72,13 @@ const ajuste = (data)=>{  x.domain(d3.extent(data, (d) => d.income))
 
   g.append("text")
     .attr("x", ancho / 2)
-    .attr("y", alto + 40)
+    .attr("y", alto + 30)
     .attr("text-anchor", "middle")
     .attr("class", "labels")
     .text("Ingreso per cápita anual (USD)")
 
   g.append("g")
-    .attr("transform", `translate(-40, ${alto / 2})`)
+    .attr("transform", `translate(-25, ${alto / 2})`)
     .append("text")
     .attr("transform", "rotate(-90)")
     .attr("text-anchor", "middle")

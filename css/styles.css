@@ -37,7 +37,7 @@ main{
   }
   
   .ejes {
-    font-size: 16px;
+    font-size: 9px;
     font-family: "Fira Code";
   }
   
@@ -48,12 +48,12 @@ main{
   }
   
   .labels {
-    font-size: 20px;
-    font-family: "Fira Code";
+    font-size: 13px;
+    font-family: "Calibri";
   }
   
   .year {
-    font-size: 200px;
+    font-size: 50px;
     font-family: "Fira Code";
     font-weight: bold;
     fill: #bbb;
@@ -118,8 +118,9 @@ main{
   color: rgb(90, 110, 97);
 }
 .graficas{
-  height: 70vh;
-  width: 90%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
 }
 .accordion-button:focus{
   box-shadow: none;
